@@ -12,8 +12,12 @@ public class BasicReceipt implements Receipt {
     public BasicReceipt(PurchasedItems items) {
         this.items = items;
     }
-    public void setTaxComputation(TaxComputation tc) { this.tc = tc; }
-    public void setDate(String date) { this.date = date; }
+    public void setTaxComputation(TaxComputation tc) {
+        this.tc = tc;
+    }
+    public void setDate(String date) {
+        this.date = date;
+    }
     public void prtReceipt() {
 // to implement
     }

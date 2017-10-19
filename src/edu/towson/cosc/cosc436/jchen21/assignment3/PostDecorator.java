@@ -5,7 +5,7 @@ package edu.towson.cosc.cosc436.jchen21.assignment3;
  */
 public class PostDecorator extends Decorator {
     private AddOn a;
-    public PreDecorator(AddOn a, Receipt r) {
+    public PostDecorator(AddOn a, Receipt r) {
         super(r);
         this.a = a;
     }

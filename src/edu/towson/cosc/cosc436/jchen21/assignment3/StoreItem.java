@@ -7,7 +7,34 @@ public class StoreItem {
     private String itemCode; // e.g., 3010
     private String itemDescription; // e.g., Dell Laptop
     private String itemPrice;
-    public StoreItem(String code, String descript, String price)
-    { ... }
+    public StoreItem(String code, String descript, String price) {
+        this.itemCode = code;
+        this.itemDescription = descript;
+        this.itemPrice = price;
+    }
 // appropriate getters and setters
+
+    public String getItemCode() {
+        return itemCode;
+    }
+
+    public String getItemDescription() {
+        return itemDescription;
+    }
+
+    public String getItemPrice() {
+        return itemPrice;
+    }
+
+    public void setItemCode(String itemCode) {
+        this.itemCode = itemCode;
+    }
+
+    public void setItemDescription(String itemDescription) {
+        this.itemDescription = itemDescription;
+    }
+
+    public void setItemPrice(String itemPrice) {
+        this.itemPrice = itemPrice;
+    }
 }
