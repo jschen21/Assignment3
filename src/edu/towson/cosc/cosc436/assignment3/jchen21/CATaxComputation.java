@@ -1,9 +1,9 @@
-package edu.towson.cosc.cosc436.jchen21.assignment3;
+package edu.towson.cosc.cosc436.assignment3.jchen21;
 
 /**
  * Created by jchen21 on 10/19/2017.
  */
-public class MDTaxComputation extends TaxComputation {
+public class CATaxComputation extends TaxComputation {
     public double computeTax(PurchasedItems items, ReceiptDate date) {
 // calls private method taxHoliday as part of this computation
     }
@@ -11,3 +11,4 @@ public class MDTaxComputation extends TaxComputation {
 // returns true if date of receipt within the state’s tax free holiday,
 // else returns false. Supporting method of method computeTax.
 }
+

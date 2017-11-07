@@ -1,4 +1,4 @@
-package edu.towson.cosc.cosc436.jchen21.assignment3;
+package edu.towson.cosc.cosc436.assignment3.jchen21;
 
 public class Main {
 

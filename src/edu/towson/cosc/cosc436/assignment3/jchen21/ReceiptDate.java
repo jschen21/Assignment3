@@ -1,9 +1,9 @@
-package edu.towson.cosc.cosc436.jchen21.assignment3;
+package edu.towson.cosc.cosc436.assignment3.jchen21;
 
 /**
  * Created by jchen21 on 10/26/2017.
  */
-public class ReceiptDate {
+public class ReceiptDate{
     private int month;
     private int day;
     private int year;
@@ -24,5 +24,8 @@ public class ReceiptDate {
 
     public int getYear() {
         return year;
+    }
+    public String toString(){
+        return (month + " " + day + ", " + year);
     }
 }
