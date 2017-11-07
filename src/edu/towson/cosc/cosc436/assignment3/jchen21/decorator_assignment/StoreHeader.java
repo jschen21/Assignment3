@@ -1,4 +1,4 @@
-package edu.towson.cosc.cosc436.assignment3.jchen21;
+package edu.towson.cosc.cosc436.assignment3.jchen21.decorator_assignment;
 
 public class StoreHeader {
     private String street_addr;
