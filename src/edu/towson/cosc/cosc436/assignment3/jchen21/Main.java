@@ -1,5 +1,8 @@
 package edu.towson.cosc.cosc436.assignment3.jchen21;
 
+import edu.towson.cosc.cosc436.assignment3.jchen21.decorator_assignment.ReceiptFactory;
+import edu.towson.cosc.cosc436.assignment3.jchen21.interfaces.Receipt;
+
 public class Main {
 
     public static void main(String[] args)

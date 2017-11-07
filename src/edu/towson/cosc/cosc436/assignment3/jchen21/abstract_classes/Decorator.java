@@ -1,4 +1,6 @@
-package edu.towson.cosc.cosc436.assignment3.jchen21;
+package edu.towson.cosc.cosc436.assignment3.jchen21.abstract_classes;
+
+import edu.towson.cosc.cosc436.assignment3.jchen21.interfaces.Receipt;
 
 /**
  * Created by jchen21 on 10/19/2017.
