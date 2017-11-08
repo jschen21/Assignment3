@@ -44,7 +44,7 @@ public class ReceiptFactory {
     public Receipt getReceipt(PurchasedItems items, ReceiptDate date){
         Receipt receipt = new BasicReceipt(items, date);
         receipt.setDate(date);
-        receipt.setStoreHeader(street_addr, zip_code,state_code, phone_num, store_num);
+        receipt.setStoreHeader(street_addr, zip_code, state_code, phone_num, store_num);
 
 
         switch (state_code) {
