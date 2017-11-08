@@ -17,6 +17,6 @@ public class StoreHeader {
         return store_num;
     }
     public String toString(){
-        return ("Store Number: " + store_num + "\n" + street_addr + "\n" + state_code + " " + zip_code + "\n" + phone_num);
+        return (store_num + ", " + street_addr + ", " + zip_code + ", " + phone_num + "\n" + state_code);
     }
 }

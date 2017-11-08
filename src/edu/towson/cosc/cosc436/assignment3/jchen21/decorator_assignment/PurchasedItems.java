@@ -8,7 +8,7 @@ import java.util.ArrayList;
 public class PurchasedItems {
     private ArrayList<StoreItem> items;
     public PurchasedItems() {
-        items = new ArrayList<StoreItem>();
+        items = new ArrayList<>();
     }
     public void addItem(StoreItem item) {
         items.add(item);
@@ -23,7 +23,7 @@ public class PurchasedItems {
 
     public boolean containsItem(String itemCode){
         for(StoreItem a: items){
-            if(itemCode == a.getItemCode()){
+            if(itemCode.equals(a.getItemCode())){
                 return true;
             }
         }

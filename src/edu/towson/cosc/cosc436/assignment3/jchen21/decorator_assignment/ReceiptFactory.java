@@ -19,7 +19,10 @@ import java.util.Scanner;
  * Created by jchen21 on 10/19/2017.
  */
 public class ReceiptFactory {
-    private String header;
+    private String store_num;
+    private String phone_num;
+    private String street_addr;
+    private String zip_code;
     private String state_code;
     private TaxComputation[] taxComputationsObjs;
     private AddOn[] addOns;
@@ -38,9 +41,10 @@ public class ReceiptFactory {
         readFile();
     }
 
-    public Receipt getReceipt(PurchasedItems items, String date){
+    public Receipt getReceipt(PurchasedItems items, ReceiptDate date){
         Receipt receipt = new BasicReceipt(items, date);
         receipt.setDate(date);
+        receipt.setStoreHeader(street_addr, zip_code,state_code, phone_num, store_num);
 
 
         switch (state_code) {
@@ -57,7 +61,7 @@ public class ReceiptFactory {
                 receipt.setTaxComputation(taxComputationsObjs[3]);
                 break;
             default:
-                System.out.println("ERROR: Not a valid state code");
+                System.out.println("Not a valid state code");
                 break;
         }
 
@@ -76,8 +80,11 @@ public class ReceiptFactory {
 
     private void readFile(){
         try{
-            Scanner file = new Scanner(new File( ));
-            header = file.nextLine();
+            Scanner file = new Scanner(new File("config.txt"));
+            store_num = file.nextLine();
+            phone_num = file.nextLine();
+            street_addr = file.nextLine();
+            zip_code = file.nextLine();
             state_code = file.nextLine();
             file.close();
         } catch(IOException a){

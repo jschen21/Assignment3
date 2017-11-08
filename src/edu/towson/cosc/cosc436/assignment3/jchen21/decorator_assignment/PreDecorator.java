@@ -20,12 +20,17 @@ public class PreDecorator extends Decorator {
     }
 
     @Override
-    public void setDate(String date) {
+    public void setDate(ReceiptDate date) {
 
     }
 
     @Override
     public void setTaxComputation(TaxComputation tc) {
+
+    }
+
+    @Override
+    public void setStoreHeader(String street_addr, String zip_code, String state_code, String phone_num, String store_num) {
 
     }
 }

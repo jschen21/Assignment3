@@ -10,21 +10,21 @@ import edu.towson.cosc.cosc436.assignment3.jchen21.interfaces.Receipt;
 public class BasicReceipt implements Receipt {
     private StoreHeader store_header;
     private PurchasedItems items;
-    private String date;
+    private ReceiptDate date;
     private TaxComputation tc;
 
-    public BasicReceipt(PurchasedItems items, String date) {
+    public BasicReceipt(PurchasedItems items, ReceiptDate date) {
         this.items = items;
         this.date = date;
     }
-    public void setDate(String date) {
+    public void setDate(ReceiptDate date) {
         this.date = date;
     }
     public void setTaxComputation(TaxComputation tc) {
         this.tc = tc;
     }
-    public void setStoreHeader(StoreHeader h){
-        store_header = h;
+    public void setStoreHeader(String street_addr, String zip_code, String state_code, String phone_num, String store_num){
+        store_header = new StoreHeader(street_addr, zip_code, state_code, phone_num, store_num);
     }
 
     public void prtReceipt() {
@@ -32,7 +32,7 @@ public class BasicReceipt implements Receipt {
         double tax = tc.computeTax(items, date);
         double total = subtotal + tax;
 
-        System.out.println(store_header);
+        System.out.println(store_header.toString());
         System.out.println("Date: " + date);
 
         items.printItems();
