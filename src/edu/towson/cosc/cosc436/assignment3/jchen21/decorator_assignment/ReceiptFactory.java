@@ -66,7 +66,7 @@ public class ReceiptFactory {
         }
 
         for(AddOn a: addOns){
-            if(a.applies(items)){
+            if(a.applies(items, date)){
                 if(a instanceof SecondaryHeading){
                     receipt = new PreDecorator(a, receipt);
                 }
