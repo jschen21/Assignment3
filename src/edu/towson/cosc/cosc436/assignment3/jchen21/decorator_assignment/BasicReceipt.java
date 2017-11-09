@@ -4,6 +4,8 @@ package edu.towson.cosc.cosc436.assignment3.jchen21.decorator_assignment;
 import edu.towson.cosc.cosc436.assignment3.jchen21.abstract_classes.TaxComputation;
 import edu.towson.cosc.cosc436.assignment3.jchen21.interfaces.Receipt;
 
+import java.text.DecimalFormat;
+
 /**
  * Created by jchen21 on 10/19/2017.
  */
@@ -28,18 +30,19 @@ public class BasicReceipt implements Receipt {
     }
 
     public void prtReceipt() {
+        DecimalFormat money = new DecimalFormat("###,###.00");
         double subtotal = items.getTotalCost();
         double tax = tc.computeTax(items, date);
         double total = subtotal + tax;
 
         System.out.println(store_header.toString());
-        System.out.println("Date: " + date);
+        System.out.println("Date: " + date.getMonth() + "/" + date.getDay() + "/" + date.getYear());
 
         items.printItems();
 
-        System.out.println("Subtotal: $" + subtotal);
-        System.out.println("Tax: +$" + tax);
-        System.out.println("Total: $" + total);
+        System.out.println("Subtotal: $" + money.format(subtotal));
+        System.out.println("Tax: +$" + money.format(tax));
+        System.out.println("Total: $" + money.format(total));
 
     }
 }

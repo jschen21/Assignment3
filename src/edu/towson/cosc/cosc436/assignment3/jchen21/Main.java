@@ -9,9 +9,10 @@ import java.util.*;
 
 public class Main {
 
+    @SuppressWarnings({ "unchecked", "null", "resource" })
     public static void main(String[] args) {
         Scanner cin = new Scanner(System.in);
-        PurchasedItems items = null;
+        PurchasedItems items = new PurchasedItems();
 
         System.out.println("What is the current month(in numbers)?: ");
         int month = cin.nextInt();
@@ -40,7 +41,8 @@ public class Main {
             input = cin.nextInt();
 
             switch (input){
-                case 1: items = null;
+                case 1: items = new PurchasedItems();
+                    System.out.println("New receipt started\n");
                     break;
                 case 2: addItems(available, items);
                     break;
@@ -57,7 +59,7 @@ public class Main {
         int i = 0;
 
         for(StoreItem a: list){
-            System.out.println("Item #" + i+1 + ": " + a.getItemDescription() + "      " + a.getItemPrice() + "\n");
+            System.out.println("Item #" + i + ": " + a.getItemDescription() + "      " + a.getItemPrice() + "\n");
             i++;
         }
 
@@ -68,8 +70,10 @@ public class Main {
             input = cin.nextInt();
             if(input == 10)
                 cont = false;
-            else
-                items.addItem(list.get(i-1));
+            else {
+                items.addItem(list.get(input));
+                System.out.println("Item #" + input + " added");
+            }
         }
     }
 }
